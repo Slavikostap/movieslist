@@ -1,0 +1,50 @@
+<h1>Movies List</h1>
+<br>
+
+<form class='row'>
+			<div class="col-sm-7"> <label>Movie Name: </label><input type="text" class="form-control" ng-model="movieName" placeholder="Please enter movie name...">  </div>
+			<div class="col-sm-5"> <label>Year of Production: </label> <input type='text' class="form-control" ng-model="year" placeholder="Year of production..."></div>
+			<br><br>
+			<div class="col-sm-12 radiobuttons">
+				<input type="radio" name="type" value="" ng-model="typeOfMovie" checked> All
+				<input type="radio" name="type" value="movie" ng-model="typeOfMovie"> Movie
+				<input type="radio" name="type" value="series" ng-model="typeOfMovie"> Series
+				<input type="radio" name="type" value="episode" ng-model="typeOfMovie"> Episode	
+			</div>
+  			
+		</form>
+		<button class="btn btn-primary search" ng-click="searchMovies()">Search</button>	
+		<button class="btn btn-danger search" ng-click="resetStorage()">Clear cash</button>	
+		
+
+		<div tagged-infinite-scroll="addMovies()" tagged-infinite-scroll-disabled="fetching || disabled">	
+		<!-- <div lazy-scroll="addMovies()" lazy-scroll-trigger="90"> -->
+		
+			<table class="table table-striped">
+			<tr>
+				<th>Poster</th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Type</th>
+				<th>Info</th>
+				
+				<h2>{{errorMessage}}</h2>
+			
+
+			</tr>
+				<tbody>
+					<tr ng-repeat="movie in movies">
+						<td><img ng-src="{{movie.Poster}}" alt="Movie Poster" width="100px"></td>		
+						<td>{{movie.Title}}</td>
+						<td>{{movie.Year}}</td>
+						<td>{{movie.Type}}</td>
+						<td>
+							<button ng-click="moreInfo(movie.imdbID)" class="btn btn-primary paddingless">
+								<a class="info" ng-href="#/{{movie.imdbID}}">info</a> 
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>	
+	</div>

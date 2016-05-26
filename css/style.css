@@ -1,0 +1,24 @@
+.radiobuttons{
+	margin: 20px 0;
+}
+	.radiobuttons input[type=radio]{
+		margin: 0px 0 0 15px;
+	}
+		.radiobuttons input[type=radio]:first-child{
+			margin: 0;
+		}
+
+.btn.paddingless{
+	padding: 0;
+}
+
+.info{
+	display: block;
+	color: #fff;
+	padding: 8px 15px;
+}	
+
+	.info:hover{
+		text-decoration: none;
+		color: #fff;
+	}	
