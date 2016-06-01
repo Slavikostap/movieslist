@@ -1,0 +1,40 @@
+.radiobuttons{
+	margin: 20px 0;
+}
+	.radiobuttons input[type=radio]{
+		margin: 0px 0 0 15px;
+	}
+		.radiobuttons input[type=radio]:first-child{
+			margin: 0;
+		}
+
+.btn.paddingless{
+	padding: 0;
+}
+
+.info{
+	display: block;
+	color: #fff;
+	padding: 8px 15px;
+}	
+
+	.info:hover{
+		text-decoration: none;
+		color: #fff;
+	}	
+
+.image{
+	width: 100px;
+	height: 150px;
+}
+
+.fa.fa-spinner.fa-spin{
+	font-size: 3em;
+	text-align: center;
+	display: inline-block;
+}
+
+.spinner{
+	text-align: center;
+	display: block;
+}
